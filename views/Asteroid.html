@@ -1,0 +1,32 @@
+<div class="container" ng-controller="AsteroidController">
+    <div class="row">
+        <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-3 col-xs-6">
+            <h1 class="Name">{{asteroid.name}}</h1>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-4 col-md-offset-2 col-md-4 col-sm-offset-1 col-sm-5 col-xs-offset-1 col-xs-5">
+            <h3 class="middle">Main:</h3>
+            <hr/>
+            <ul class="Properties">
+                <li>Absolute magnitude <span class="glyphicon glyphicon-minus"></span> {{asteroid.absolute_magnitude_h}} </li>
+                <li>Reference id<span class="glyphicon glyphicon-minus"></span> {{asteroid.neo_reference_id}}</li>
+                <li><a class="url" href="{{asteroid.nasa_jpl_url}}">Nasa Url</a></li>
+                <li>Hazardous Asteroid<span class="glyphicon glyphicon-minus"></span> {{asteroid.is_potentially_hazardous_asteroid}}</li>
+            </ul>
+        </div>
+        <div class=" col-lg-4 col-md-4  col-sm-5  col-xs-5">
+            <h3 class="middle">Orbital Data:</h3>
+            <hr/>
+            <ul class="Properties">
+                <li>Orbit Id <span class="glyphicon glyphicon-minus"></span> {{asteroid.orbital_data.orbit_id}} </li>
+                <li>Determination Date<span class="glyphicon glyphicon-minus"></span> {{asteroid.orbital_data.orbit_determination_date}}</li>
+                <li>Minimum Orbit Intersection <span class="glyphicon glyphicon-minus"></span> {{asteroid.orbital_data.minimum_orbit_intersection}} </li>
+                <li>Eccentricity <span class="glyphicon glyphicon-minus"></span> {{asteroid.orbital_data.eccentricity}} </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>

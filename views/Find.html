@@ -1,0 +1,43 @@
+<div class="container findForm" id="" ng-controller="FindController">
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-offset-2 col-sm-4 col-xs-offset-1 col-xs-5">
+            <h2>
+                Description
+            </h2>
+            <hr />
+        </div>
+        <div class=" col-lg-3   col-md-3 col-sm-4 col-xs-5">
+            <h2 class="rightSide">
+                Request
+            </h2>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-3  col-md-offset-3 col-md-3 col-sm-offset-2 col-sm-4 col-xs-offset-1 col-xs-5">
+            <p>I can show you some asteroids.</p>
+            <p>Rules:</p>
+            <ul>
+                <li>
+                    <p>Date period have to less 7 days.</p>
+                </li>
+                <li>
+                    <p>Date format should be like this: 2016-06-01</p>
+                </li>
+            </ul>
+        </div>
+        <div class=" col-lg-3   col-md-3 col-sm-4 col-xs-5">
+            <form name="dateForm">
+                <div class="form-group">
+                    <label for="dateFormStart">Start Date</label>
+                    <input type="text" ng-pattern="/\d\d\d\d-\d\d-\d\d/" class="form-control" required id="dateFormStart" placeholder="yyyy-mm-dd" ng-model="date.start">
+                </div>
+                <div class="form-group">
+                    <label for="dateFormEnd">End Date</label>
+                    <input type="text" ng-pattern="/\d\d\d\d-\d\d-\d\d/" class="form-control" required id="dateFormEnd" placeholder="yyyy-mm-dd" ng-model="date.end">
+                </div>
+                <button type="submit" ng-click="show(date, dateForm)" class="btn btn-default">Show</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+body {
+    padding-top:  75px;
+    background-image: url("../cosmos.png");
+    background-repeat: repeat;
+    background-size: 30% ;
+}
+#title {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.Name {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    text-align: center;
+
+}
+.middle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+.findForm {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+.findForm p {
+    font-size: 18px;
+}
+.rightSide {
+    text-align: right;
+}
+#asteroid-list {
+    color: #fff;
+}
+.back {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+.back:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+#menu {
+    list-style:none;
+    margin:0;
+    padding:0;
+    position: relative;
+    left:50%;
+    float:left;
+}
+#menu > li {
+    position:relative;
+    left:-50%;
+    float:left;
+    margin:0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 25px;
+}
+#menu a {
+    text-decoration: none;
+    color: #fff;
+}
+#menu a:hover {
+    text-decoration: none;
+    opacity: 0.5;
+    color: #337ab7;
+}
+.url {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+.url:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    
+}
+
+.Properties {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 17px;
+    list-style: circle;
+}
+.list-center {
+    text-align: center;
+}
+.list-group {
+    list-style: none;
+}
+.list-asteroid {
+    margin-top: 30px;
+}
+#pagenation {
+    list-style:none;
+    margin:0;
+    padding:0;
+    position: relative;
+    left:50%;
+    float:left;
+}
+#pagenation > li {
+    position:relative;
+    left:-50%;
+    float:left;
+    margin:0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 17px;
+}
+#Current {
+     text-decoration: underline;
+}
+

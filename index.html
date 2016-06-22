@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="nasaApp">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container">
+    <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8">
+        <h1 id="title">Find Your Asteroid
+            <hr/>
+        </h1>
+    </div>
+</div>
+<ng-view></ng-view>
+<footer>
+    <div class="container">
+        <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8">
+            <hr/>
+            <ul id="menu">
+                <li><a  href="#/List">All Asteroids</a></li>
+                <li><a href="#/Find">Find By Date</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="js/libs/angular.js"></script>
+<script src="js/libs/angular-route.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/FindController.js"></script>
+<script src="js/controllers/AsteroidController.js"></script>
+<script src="js/controllers/ListbyDateController.js"></script>
+<script src="js/controllers/ListController.js"></script>
+<script src="js/controllers/NotFoundController.js"></script>
+</body>
+</html>

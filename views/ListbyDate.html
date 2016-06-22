@@ -1,0 +1,14 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-6 col-md-9 col-sm-12 col-xs-12 table-responsive" ng-controller="ListbyDateController">
+            <ul class="list-group">
+                <li class="list-center" ng-repeat="asteroid in asteroid_list ">
+                    <p>
+                        <a class="url" href="#/Details/{{asteroid.neo_reference_id}}">{{asteroid.name}}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

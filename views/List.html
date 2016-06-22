@@ -1,0 +1,42 @@
+<div class="container " ng-controller="ListController">
+
+    <div class="row ">
+        <div class="col-lg-offset-3 col-lg-2 col-md-offset-3 col-md-2 findForm col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8">
+            <form class="">
+                <div class="form-group">
+                    <label for="countOfelement">Count of element (Max 10)</label>
+                    <input type="number" class="input-number form-control" ng-pattern="/^\d+$/" ng-model="date.size" min="1" max="10" id="countOfelement" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="CurrentPage">Page (Max {{asteroid_list.page.total_pages-1}})</label>
+                    <input type="number" class="form-control" ng-model="date.page" id="CurrentPage" min="0" placeholder="">
+                </div>
+                <button type="submit" ng-click="submit(date)" class="btn btn-default btn-success">Send</button>
+            </form>
+        </div>
+        <div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12  list-asteroid">
+            <ul class="list-group">
+                <li class="list-center" ng-repeat="asteroid in asteroid_list.near_earth_objects ">
+                    <p>
+                        <a class="url" href="#/Details/{{asteroid.neo_reference_id}}">{{asteroid.name}}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-5 col-lg-4">
+            <ul id="pagenation">
+                <li><a class="url" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                <li><a class="url" ng-click="first()">{{ asteroid_list.page.number== 0?"":"0"}}</a></li>
+                <li><a class="url" ng-click="prev2()">{{asteroid_list.page.number== 1 || asteroid_list.page.number== 0 || asteroid_list.page.number==2 ?"":"..."}}</a></li>
+                <li><a class="url" ng-click="prev()">{{asteroid_list.page.number==0 || asteroid_list.page.number==1 ?"":asteroid_list.page.number-1}}</a></li>
+                <li>{{asteroid_list.page.number}}</li>
+                <li><a class="url" ng-click="next()">{{asteroid_list.page.number!=asteroid_list.page.total_pages-1?asteroid_list.page.number+1:""}}</a></li>
+                <li><a class="url" ng-click="next2()">{{asteroid_list.page.number>asteroid_list.page.total_pages-4?"":"..."}}</a></li>
+                <li><a class="url" ng-click="last()">{{asteroid_list.page.number==asteroid_list.page.total_pages-1|| asteroid_list.page.number==asteroid_list.page.total_pages-2?"":asteroid_list.page.total_pages-1}}</a></li>
+                <li><a class="url" ng-click="next()"><span  class="glyphicon glyphicon-chevron-right"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
